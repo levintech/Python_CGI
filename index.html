@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Gene Associations</title>
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/search.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+</head>
+
+<body id="main">
+
+    <h1>DNA Sequence Reverse and Complement Tool</h1>
+    <form name="my_form" enctype="multipart/form-data" method="POST" action="http://localhost/cgi-bin/rev_comp.cgi">
+        <fieldset class="blue2">
+            <legend class="blue2">TARGET SEQUENCE</legend>
+            <p>Put your DNA sequence below</p>
+            <textarea name="seq" rows="17" cols="80" value=""></textarea>
+        </fieldset>
+        
+        <fieldset class="red2">
+            <legend class="red2">OPTIONS</legend>
+            <b>Reverse and Complement Options</b>
+            <p>
+                <input type="radio" name="trans_opt" value="rev_comp" checked="">Reverse and Complement&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="trans_opt" value="rev">Reverse&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="trans_opt" value="comp">Complement
+                <br>
+            </p>
+        
+            <b>Output Options:</b>
+            <p>
+                <input type="radio" name="case" value="up" checked> 
+                UPPER CASE&nbsp;&nbsp;&nbsp;
+                
+                <input type="radio" name="case" value="low"> 
+                lower case
+            </p>
+            <p>
+            
+            Include numbering and line breaks every:
+            
+            <input type="text" size="3" name="numbers" value="0">
+            nucleotides/residues (Put "0" for no formatting)
+            
+        
+            </p>
+        </fieldset>    
+        <p>
+        
+        </p>
+        <center>
+            <input type="SUBMIT" value="Go!" class="nice-button">
+        </center>
+        
+    </form>
+
+</body>
+
+</html>
